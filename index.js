@@ -47,6 +47,8 @@ function *api() {
 }
 
 function *getBalance() {
+    // Could also use this api:
+    // 'https://blockchain.info/q/addressbalance/' + config.blockchain.address + '?confirmations=6'
     var response = yield doRequest(config.blockchain.restApiUrl + config.blockchain.guid + '/balance?password=' + config.blockchain.password);
     return JSON.parse(response[0].body).balance;
 }
