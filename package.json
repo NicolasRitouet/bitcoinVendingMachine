@@ -1,6 +1,6 @@
 {
-    "name": "Koa-Vagrant-boilerplate",
-    "description": "Koa-Vagrant boilerplate",
+    "name": "bitcoinVendingMachine",
+    "description": "Candy vending machine that takes bitcoins",
     "version": "0.0.1",
     "author": {
         "name": "Nicolas Ritouet",
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/NicolasRitouet/koa-vagrant-boilerplate.git"
+        "url": "https://github.com/NicolasRitouet/bitcoinVendingMachine"
     },
     "dependencies": {
         "koa": "~0.4.0",
