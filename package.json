@@ -1,22 +1,29 @@
 {
-    "name": "bitcoinVendingMachine",
-    "description": "Candy vending machine that takes bitcoins",
-    "version": "0.0.1",
-    "author": {
-        "name": "Nicolas Ritouet",
-        "email": "nicolas@ritouet.com",
-        "web": "http://nicolas.ritouet.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/NicolasRitouet/bitcoinVendingMachine"
-    },
-    "dependencies": {
-        "koa": "~0.4.0",
-        "request": "~2.33.0"
-    },    
-    "engines": {
-        "node": "~0.11.11"
-    },
-    "main": "index.js"
+  "name": "bitcoinVendingMachine",
+  "description": "Candy vending machine that takes bitcoins",
+  "version": "0.0.1",
+  "author": {
+    "name": "Nicolas Ritouet",
+    "email": "nicolas@ritouet.com",
+    "web": "http://nicolas.ritouet.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolasRitouet/bitcoinVendingMachine"
+  },
+  "dependencies": {
+    "koa": "~0.4.0",
+    "request": "~2.33.0",
+    "ws": "~0.4.31",
+    "debug": "~0.7.4",
+    "lodash-node": "~2.4.1",
+    "koa-route": "~1.0.2",
+    "co-views": "~0.2.0",
+    "ejs": "~0.8.5",
+    "koa-static": "~1.4.3"
+  },
+  "engines": {
+    "node": "~0.11.11"
+  },
+  "main": "index.js"
 }

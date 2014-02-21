@@ -1,0 +1,22 @@
+<% include head %>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+    <h3 class="panel-title">Information about vending Machine</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-xs-10">
+            Bitcoin Address  <%= btcAddress %><br />
+            Balance of wallet: <%= balance %><br />
+            Exchange Rate for 1<i class="fa fa-eur"></i> : <%= exchangeRate %> <i class="fa fa-btc"></i><br />
+            Last check: <%= timestamp %>
+        </div>
+        <div class="col-xs-2">
+            <img src="img/qrcode.png"/>
+            Scan me
+        </div>
+        
+    </div>
+</div>
+
+<% include footer %>
