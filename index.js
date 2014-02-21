@@ -27,10 +27,16 @@ app.use(route.get('/api', api));
 
 
 function *main() {
+    var exchangeRate = yield getExchangeRate();
+    var satoshiBalance = yield getBalance();
+    var bitcoinBalance = satoshiBalance / 100000000;
+    var euroBalance = Math.round((bitcoinBalance / exchangeRate) * 100) / 100;
 
     this.body = yield render('main', {
-        exchangeRate: yield getExchangeRate(),
-        balance: yield getBalance(),
+        exchangeRate: exchangeRate,
+        satoshiBalance: satoshiBalance,
+        bitcoinBalance: bitcoinBalance,
+        euroBalance: euroBalance,
         timestamp: new Date,
         btcAddress: config.blockchain.address
     });
@@ -38,10 +44,17 @@ function *main() {
 
 function *api() {
 
+    var exchangeRate = yield getExchangeRate();
+    var satoshiBalance = yield getBalance();
+    var bitcoinBalance = satoshiBalance / 100000000;
+    var euroBalance = Math.round((bitcoinBalance / exchangeRate) * 100) / 100;
+
     this.body = {
         timestamp: Date.now(),
-        balance: yield getBalance(),
-        exchangeRate: yield getExchangeRate(),
+        satoshiBalance: satoshiBalance,
+        bitcoinBalance: bitcoinBalance,
+        euroBalance: euroBalance,
+        exchangeRate: exchangeRate,
         btcAddress: config.blockchain.address
     };
 }
@@ -91,4 +104,4 @@ var getTransValueForAddress = function(transaction, btcAddress) {
 }
 
 
-app.listen(3001);
+app.listen(3000);
