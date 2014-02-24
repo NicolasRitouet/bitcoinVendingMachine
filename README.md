@@ -14,33 +14,24 @@ I currently use the [blockchain.info API](https://blockchain.info/api). The long
 
 How to use
 ==
+### Requirements
+- NodeJS > v0.11.10
 ````bash
-$ git clone git@github.com:NicolasRitouet/bitcoinVendingMachine.git
-$ cd bitcoinVendingMachine
-// check that node is at least version 0.11.10
-// if not, I recommend using nvm to install the needed version
 $ node -v
-// v0.11.10
-$ npm install
-$ node index.js --harmony
-`````
-### Vagrant variant (unstable !)
-If you don't want to install nodeJS on your machine, you can also use vagrant to run the app.
-You need to install VirtualBox and Vagrant first.
-Then, run this:
+// if < v0.11.10
+$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+$ nvm install 0.11
+$ nvm use 0.11
+````
+
+### Install
 ````bash
 $ git clone git@github.com:NicolasRitouet/bitcoinVendingMachine.git
 $ cd bitcoinVendingMachine
-$ vagrant up
-$ vagrant ssh
-// in vagrant:
-$ nodemon -L --harmony index.js
-`````
-You can now open the application in your host at :
-`````
-http://192.168.33.10:3000
-```
-Any change made in the code will be automatically reflected on the server. (theoretically!)
+$ npm install
+$ npm install -g nodemon
+$ nodemon --harmony index.js
+````
 
 Why KoaJS?
 ==
