@@ -12,15 +12,15 @@
     "url": "https://github.com/NicolasRitouet/bitcoinVendingMachine"
   },
   "dependencies": {
-    "koa": "~0.4.0",
-    "request": "~2.33.0",
-    "ws": "~0.4.31",
-    "debug": "~0.7.4",
-    "lodash-node": "~2.4.1",
-    "koa-route": "~1.0.2",
-    "co-views": "~0.2.0",
-    "ejs": "~0.8.5",
-    "koa-static": "~1.4.3"
+    "koa": "~1.2.4",
+    "request": "~2.76.0",
+    "ws": "~1.1.1",
+    "debug": "~2.2.0",
+    "lodash-node": "~3.10.2",
+    "koa-route": "~2.4.2",
+    "co-views": "~2.1.0",
+    "ejs": "~2.5.2",
+    "koa-static": "~2.0.0"
   },
   "scripts": {
     "start": "node --harmony --harmony_generators index.js"
